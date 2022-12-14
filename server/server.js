@@ -16,6 +16,9 @@ app.get('/', (req,res) => {
 app.get('/css', (req,res) => {
     res.status(200).sendFile(path.join(__dirname, '../public/styles.css'))
 })
+app.get('/profile', (req,res) => {
+    res.status(200).sendFile(path.join(__dirname, '../public/profile.html'))
+})
 
 app.get(`/api/:temperature`, (req,res) => {
     let { temperature } = req.params
